@@ -1,6 +1,6 @@
 import React, {createRef, useEffect, useMemo, useRef, useState} from 'react';
 import {type} from "../TextAnimation";
-import {Box, Typography} from "@mui/material";
+import {Box, Link, Typography} from "@mui/material";
 import {PageDetail} from "../App";
 
 const MyInfo = (props: PageDetail) => {
@@ -11,20 +11,6 @@ const MyInfo = (props: PageDetail) => {
     for (let info of infos) {
         listOfTarget.push(useRef(null))
     }
-
-    // const infoView = useMemo(() => {
-    //     // console.log("----1---")
-    //     // listOfTarget = Array(infos.length).fill("_").map((_, i) => listOfTarget[i] || useRef(null))
-    //
-    //     return <Box>
-    //         {infos.map((info, index) => (
-    //             <div key={index}>
-    //                 <Typography variant='h4'>{info.header}</Typography>
-    //                 <Typography variant='h6' ref={listOfTarget[index]}/>
-    //             </div>
-    //         ))}
-    //     </Box>
-    // }, [infos])
 
     useEffect(() => {
         // console.log("----2-----")
@@ -40,12 +26,12 @@ const MyInfo = (props: PageDetail) => {
 
     return (
         <Box sx={{
-            overflowY: 'scroll',
+            overflowY: 'hidden',
             color: 'white',
             height: '100%',
             maxHeight: '80vh',
             minHeight: '80vh',
-            margin: '20px'
+            margin: '20px',
         }}>
             <Typography variant='h3'>{props.title}</Typography>
             <Box>
@@ -59,5 +45,5 @@ const MyInfo = (props: PageDetail) => {
         </Box>
     );
 };
-
+// <span>http://www.eilift.store</span>
 export default MyInfo;

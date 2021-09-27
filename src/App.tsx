@@ -1,10 +1,9 @@
 import React, {useRef, useState} from 'react'
 import {Box, createTheme, CssBaseline, Fade, Grow, IconButton, Snackbar, Stack, ThemeProvider} from '@mui/material';
-import MediaControlCard from "./component/ShortIntro";
+import PortfolioCard from "./component/ShortIntro";
 import imgMyimageexample from "../public/background.jpeg";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import {TransitionProps} from "@mui/material/transitions";
 
 export type PageDetail = {
     title: string,
@@ -77,7 +76,7 @@ function App() {
                     }}>
                         <KeyboardArrowLeftIcon fontSize='large' sx={{color: 'white'}}/>
                     </IconButton>
-                    <MediaControlCard  {...pageDetail} />
+                    <PortfolioCard  {...pageDetail} />
                     <IconButton onClick={() => {
                         if (pageIndex >= list.length - 1) {
                             // setPageIndex(0)
@@ -376,23 +375,6 @@ function lisOfPageDetail() {
             infos: [
                 {
                     header: "Kong Fo Cha",
-                    description: "This is a share business with my friend, will close down next month due to MCO affect. Investment failure"
-                },
-                {
-                    header: "",
-                    description: ""
-                },
-                {
-                    header: "",
-                    description: ""
-                }],
-            title: "Business and Investment"
-        },
-        {
-            image: "d1.jpg",
-            infos: [
-                {
-                    header: "Kong Fo Cha",
                     description: "This is a share business with my friend, will close down next month due to MCO affect."
                 },
                 {
@@ -451,8 +433,8 @@ function lisOfPageDetail() {
                     description: ""
                 },
                 {
-                    header: "Phone Number",
-                    description: "0123456789"
+                    header: "Code",
+                    description: "https://github.com/kokhou/hello-kokhou"
                 }],
             title: "Contact"
         }
