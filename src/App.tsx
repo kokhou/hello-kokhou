@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react'
 import {Box, createTheme, CssBaseline, Fade, Grow, IconButton, Snackbar, Stack, ThemeProvider} from '@mui/material';
-import PortfolioCard from "./component/ShortIntro";
+import PortfolioCard from "./component/PortfolioCard";
 import imgMyimageexample from "../public/background.jpeg";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';

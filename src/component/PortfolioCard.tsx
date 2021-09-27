@@ -8,7 +8,6 @@ import {useEffect, useState} from "react";
 
 export default function PortfolioCard(props: PageDetail) {
     const [imageIsLoading, setImageIsLoading] = useState(true);
-    // const [image, setImage] = useState({});
     const handleImageLoaded = () => {
         setImageIsLoading(false);
     };
@@ -19,14 +18,13 @@ export default function PortfolioCard(props: PageDetail) {
         const image = new Image();
         image.onload = handleImageLoaded;
         image.src = props.image;
-        // setImage(image);
     }, [props.image]);
 
     return (
         <Card sx={{width: '100%'}}>
             <Grid container columns={2}>
                 <Grid item xs={1} sx={{
-                    background: `linear-gradient(to top, #414345, #232526)` /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    background: `linear-gradient(to top, #414345, #232526)`
                 }}>
                     <MyInfo {...props}/>
                 </Grid>

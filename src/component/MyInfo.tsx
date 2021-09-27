@@ -13,7 +13,6 @@ const MyInfo = (props: PageDetail) => {
     }
 
     useEffect(() => {
-        // console.log("----2-----")
         for (let i = 0; i < infos.length; i++) {
             let listOfTargetElement = listOfTarget[i];
             if (listOfTargetElement.current) {
@@ -45,5 +44,4 @@ const MyInfo = (props: PageDetail) => {
         </Box>
     );
 };
-// <span>http://www.eilift.store</span>
 export default MyInfo;
